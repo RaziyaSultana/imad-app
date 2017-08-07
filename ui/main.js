@@ -7,7 +7,8 @@ element.innerHTML='New Value';
 
 var element = document.getElementById('madi');
 
-madi.onClick = function(){
+madi.onClick = function()
+{
     
  img.style.marginLeft= '500px'; 
  
