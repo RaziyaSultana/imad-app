@@ -8,5 +8,7 @@ element.innerHTML='New Value';
 var element = document.getElementById('madi');
 
 madi.onClick = function(){
- madi.style.marginLeft='100px';   
+    
+ madi.style.marginLeft= '100px'; 
+ 
 };
