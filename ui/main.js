@@ -5,7 +5,7 @@ element.innerHTML='New Value';
 
 //move the image
 
-var element = document.getElementById('img');
+var element = document.getElementById('madi');
 
 img.onClick = function(){
  
