@@ -75,7 +75,7 @@ function createTemplet (data)
           </h3>
           
           <div>
-            ${date}
+            ${date.toDateString()}
           </div>
           
            <div>
