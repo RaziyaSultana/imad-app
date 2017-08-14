@@ -13,40 +13,7 @@ var config ={
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-     'article-one': {
-            title: 'Article one|Raziya Sultana',
-            heading :'ARTICLE ONE',
-            date:'Aug 7,2017',
-            content:`<p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                       </p>
-                       <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                       </p>
-                       <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                        </p>  `
-            },
-     'article-two':{
-          title: 'Article two|Raziya Sultana',
-            heading :'ARTICLE TWO',
-            date:'Aug 8,2017',
-            content:`<p>
-                        This is the content for my second article.
-                        </p>
-                         `
-     },
-     'article-three':{
-          title: 'Article Three|Raziya Sultana',
-            heading :'ARTICLE THREE',
-            date:'Aug 9,2017',
-            content:`<p>
-                        This is the content for my third article.
-                       </p>
-                         `
-     }
-};
+
 
 function createTemplet (data)
 {
