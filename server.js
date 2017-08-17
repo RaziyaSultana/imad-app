@@ -64,7 +64,12 @@ app.get('/', function (req, res) {
 function hash(input,salt){
     //How do we cfeate a hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
+    
+    //algorithm: mdS
+    //"password" ->a6cc9vcvbcjssrtfxbhggdds
+    //"password-this-is-random-string" -->rytyrytr78fg4fggh76ffd7g
+    //"password"->"password-this-is-random-string"-> <hash> -> hash x 10k times
 }
 
 app.get('/hash/:input',function(req, res){
