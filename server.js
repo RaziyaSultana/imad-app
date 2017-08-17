@@ -69,6 +69,7 @@ function hash(input,salt){
 
 app.get('/hash/:input',function(res, req){
     var hashedString = hash('req.params.input','this-is-some-random-string');
+    
     res.send(hashedString);
     
 });
