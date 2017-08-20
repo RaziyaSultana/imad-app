@@ -34,7 +34,7 @@ submit.onclick = function() {
   
   request.open('POST','http://raziyasultana1997.imad.hasura-app.io/login',true);
   request.send(JSON.stringify({username: username, password: password}));
-
+ request.setRequestHeader('Content-Type', 'application/json')
     //make a request to the server and send the name
 
    
