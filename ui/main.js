@@ -21,7 +21,7 @@ submit.onclick = function() {
               else if(request.status === 500){
                alert('Something went wrong on the server');   
               }
-     }
+     };
     //Not done yet
          
   };
