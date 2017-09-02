@@ -38,8 +38,6 @@ submit.onclick = function() {
  
  
     //make a request to the server and send the name
-
-   
 };
 
 
