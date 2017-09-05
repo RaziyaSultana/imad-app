@@ -107,6 +107,49 @@ app.post('/create-user',function(req, res){
 });
 
 
+
+
+
+app.post('/create-user1',function(req, res){
+   //username,password
+   //["username": "raziya", "password": "password"]
+   //json
+   var username = req.body.username;
+   var password = req.body.password;
+   if(res.status===500)
+   {
+     res.send(err.toString());
+
+   }
+   else{
+    res.send('User successfully created: '+ username);
+   }
+    
+});
+
+
+app.post('/login1', function (req, res) {
+ var username = req.body.username;
+  var password = req.body.password;
+       if(res.status===500){
+          res.send(err.toString());
+      }
+      else{
+          if(res.status===403)
+          {
+              res.send('username/password is invalid');
+          }
+          else{
+               res.send('Credentials are correct and loggedin successfully!');
+               }
+          }
+          
+         
+         });
+
+
+
+
 app.post('/login', function (req, res) {
  var username = req.body.username;
    var password = req.body.password;
