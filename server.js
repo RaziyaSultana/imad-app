@@ -99,54 +99,14 @@ app.post('/create-user',function(req, res){
           res.status(500).send(err.toString());
       }
       else{
-          res.send('User successfully created: '+ username);
+          res.setHeader('Content-Type','application/json');
+          res.send(JSON.parse('{"message": "User succesfully created"}'))
+          //res.send('User successfully created: '+ username);
       } 
      });
     
     
 });
-
-
-
-
-
-app.post('/create-user1',function(req, res){
-   //username,password
-   //["username": "raziya", "password": "password"]
-   //json
-   var username = req.body.username;
-   var password = req.body.password;
-   if(res.status===500)
-   {
-     res.send(err.toString());
-
-   }
-   else{
-    res.send('User successfully created: '+ username);
-   }
-    
-});
-
-
-app.post('/login1', function (req, res) {
- var username = req.body.username;
-  var password = req.body.password;
-       if(res.status===500){
-          res.send(err.toString());
-      }
-      else{
-          if(res.status===403)
-          {
-              res.send('username/password is invalid');
-          }
-          else{
-               res.send('Credentials are correct and loggedin successfully!');
-               }
-          }
-          
-         
-         });
-
 
 
 
@@ -160,7 +120,9 @@ app.post('/login', function (req, res) {
       else{
           if(result.rows.length === 0)
           {
-              res.send(403).send('username/password is invalid');
+              res.setHeader('Content-Type','application/json');
+                   res.send(JSON.parse('{"message": "Credentials are correct!"}'));
+             // res.send(403).send('username/password is invalid');
           }
           else{
               //match the password
@@ -174,7 +136,9 @@ app.post('/login', function (req, res) {
                    //set a cookie  with session id
                    //internally on the server side, it maps the session id to an object
                    // {auth: {userId}}
-              res.send('Credentials are correct!');
+                   res.setHeader('Content-Type','application/json');
+                   res.send(JSON.parse('{"message": "Credentials are correct!"}'));
+              //res.send('Credentials are correct!');
                }
                else
                {
