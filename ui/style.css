@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
 
     font-family: sans-serif;
@@ -89,3 +90,35 @@ body {
     border-bottom: 1px solid #ccc;
 
 }
+=======
+body {
+    font-family: sans-serif;
+    margin-top: 60px;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-big {
+    font-size: 300%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.img-medium {
+    height: 200px;
+}
+
+.container{
+     max-width:800px;
+     margin: 0 auto;
+     color: blue;
+     font-family: sans-serif;
+     padding-left: 20px;
+     padding-right: 20px;
+     
+}  
+>>>>>>> 158209ce347d67a256fc6f0d0ef00d8276edd2b4
